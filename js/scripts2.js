@@ -27,6 +27,8 @@ $(document).ready(function() {
         points+=2;
       } else if(userResponses[x] === 'c') {
         points+=3;
+      } else if(userResponses[x] === 'd') {
+        points+=30000;
       }
     }
       console.log(points);
@@ -36,9 +38,10 @@ $(document).ready(function() {
         $('.result').html('Cool Dude' + "<br>" + "<img src='img/not-scary.gif'>")
       } else if (points >= 7, points <=15) {
         $('.result').html('Woah Dude' + "<br>" + "<img src='img/semi-creepy.gif'>")
-      } else if (points >= 16) {
+      } else if (points >= 16, points < 300) {
         $('.result').html('Yo Man' + "<br>" + "<img src='img/creepy.gif'>")
-      } else {
+      } else if (points >= 400) {
+        $('.result').html('Oh snap' + "<br>" + "<img src='img/sacrifice.gif'>")
 
       }
 
