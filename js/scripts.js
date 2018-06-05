@@ -21,4 +21,27 @@ $(document).ready(function() {
       $("#result").text(numbers);
 
   });
+  $("form#puzzle").submit(function(event){
+      event.preventDefault();
+      var sentence = $("input#sentence").val();
+
+      var vowels = ['a','e','i','o','u'];
+      var letters = sentence.split("");
+      var array = []
+
+      for (x = 0; x < letters.length; x ++) {
+        for (j = 0; j < vowels.length; j ++ )
+        if (letters[x] === vowels[j]) {
+           letters[x] = ("-")
+           array.push(j)
+        } else {
+         array.push()}
+      };
+
+      var finalanswer = letters.join('');
+
+      $('#result2').text(finalanswer);
+
+
+  });
 });
